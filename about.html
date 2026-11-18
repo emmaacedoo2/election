@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Election</title>
+<title>Methodology &amp; About – Election Atlas 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -30,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -45,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-977607561cd60f84a551947bb62c3781.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3afcc1aa81d8a45d9df80448abd0d056.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,7 +72,37 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -86,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Election</span>
+    <span class="navbar-title">Election Atlas 2026</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -100,8 +129,18 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./north-carolina.html"> 
+<span class="menu-text">North Carolina</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">Methodology &amp; About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./north-carolina.html"> 
+<span class="menu-text">Nov 3, 2026 General</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -111,23 +150,33 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about-election-atlas-2026" id="toc-about-election-atlas-2026" class="nav-link active" data-scroll-target="#about-election-atlas-2026">About Election Atlas 2026</a>
+  <ul class="collapse">
+  <li><a href="#data-sources-certification-status" id="toc-data-sources-certification-status" class="nav-link" data-scroll-target="#data-sources-certification-status">Data Sources &amp; Certification Status</a></li>
+  <li><a href="#partisan-margin-definition" id="toc-partisan-margin-definition" class="nav-link" data-scroll-target="#partisan-margin-definition">Partisan Margin Definition</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Methodology &amp; About</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -139,7 +188,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>About this site</p>
+<section id="about-election-atlas-2026" class="level2 info-card">
+<h2 class="anchored" data-anchor-id="about-election-atlas-2026">About Election Atlas 2026</h2>
+<p><strong>Election Atlas 2026</strong> was created for <em>Techne: AI and Data</em> to demonstrate how public election returns and official geographic boundaries can be combined into a modern, transparent election dashboard using <strong>R</strong>, the <strong>tidyverse</strong>, <strong>sf</strong>, <strong>leaflet</strong>, and <strong>Quarto</strong>.</p>
+<section id="data-sources-certification-status" class="level3">
+<h3 class="anchored" data-anchor-id="data-sources-certification-status">Data Sources &amp; Certification Status</h3>
+<ol type="1">
+<li><strong>Election Returns:</strong> Downloaded from the <a href="https://www.ncsbe.gov/results-data/election-results/historical-election-results-data">North Carolina State Board of Elections (NCSBE) Historical Election Results Data</a> portal (<code>results_pct_20261103.zip</code>, stored locally in <code>data/north-carolina/results_pct_20261103.txt</code>).</li>
+<li><strong>Unofficial Status Note:</strong> Under North Carolina law, election night and county-canvass results remain <strong>unofficial</strong> until the State Board of Elections completes the statewide canvass and certifies statewide contests (scheduled three weeks after Election Day).</li>
+<li><strong>County Boundaries:</strong> Cartographic county polygons (<code>1:500,000</code> resolution, WGS84 / <code>EPSG:4326</code>) sourced from the U.S. Census Bureau via the <code>tigris</code> R package and stored in <code>data/north-carolina/nc_counties.geojson</code>.</li>
+</ol>
+</section>
+<section id="partisan-margin-definition" class="level3">
+<h3 class="anchored" data-anchor-id="partisan-margin-definition">Partisan Margin Definition</h3>
+<p>For each county <span class="math inline">\(i\)</span>, candidate vote shares are computed as a percentage of <strong>all votes cast</strong> in the U.S. Senate contest (including Democratic, Republican, Libertarian, and Green Party candidates):</p>
+<p><span class="math display">\[\text{Margin}_i = \text{DEM \%}_i - \text{REP \%}_i\]</span></p>
+<p>Counties where <span class="math inline">\(\text{Margin}_i &gt; 0\)</span> are shaded in <strong>blue</strong> (with darker blues indicating larger Democratic margins), and counties where <span class="math inline">\(\text{Margin}_i &lt; 0\)</span> are shaded in <strong>red</strong> (with darker reds indicating larger Republican margins).</p>
+</section>
+</section>
 
 
 
@@ -217,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/emmaacedoo2\.github\.io\/election\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -545,8 +611,22 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Election Atlas 2026 • Techne: AI and Data</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Data: NC State Board of Elections (Unofficial Results) &amp; U.S. Census Bureau</p>
+</div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
